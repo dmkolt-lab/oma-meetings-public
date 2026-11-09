@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="OMA Meetings — приложение для локального распознавания записей встреч, сохранения транскрипций в Google Drive и их обработки в ChatGPT Work и Notion.">
+  <meta name="theme-color" content="#17685d">
+  <title>OMA Meetings — записи встреч в понятном реестре</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="./" aria-label="OMA Meetings — главная">OMA Meetings<span aria-hidden="true"> /</span></a>
+    <nav aria-label="Основная навигация"><a href="./" aria-current="page">О приложении</a><a href="privacy.html">Конфиденциальность</a></nav>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div class="eyebrow">Приложение для работы со встречами</div>
+      <h1>От записи встречи<br>к полному тексту.</h1>
+      <p class="lead">OMA Meetings распознаёт аудио на компьютере, сохраняет текстовые расшифровки в Google Drive и помогает организовать их обработку в ChatGPT Work и Notion.</p>
+      <a class="button" href="privacy.html">Как используются данные <span aria-hidden="true">↗</span></a>
+    </section>
+    <section class="section" aria-labelledby="workflow">
+      <h2 id="workflow">Как работает приложение</h2>
+      <div class="steps">
+        <article><span class="number">01 / НА КОМПЬЮТЕРЕ</span><h3>Распознавание записи</h3><p>Локальный обработчик создаёт расшифровку с таймкодами и метками спикеров. Исходное аудио остаётся в локальной папке.</p></article>
+        <article><span class="number">02 / В GOOGLE DRIVE</span><h3>Сохранение полного текста</h3><p>Приложение загружает TXT в папку своего Google Drive, учитывает версии и проверяет сохранённый результат.</p></article>
+        <article><span class="number">03 / В WORK И NOTION</span><h3>Реестр и уточнения</h3><p>При настроенном маршруте Work читает полный текст и создаёт или обновляет карточку Notion. Пользователь проверяет спикеров и спорные фрагменты.</p></article>
+      </div>
+    </section>
+    <section class="section split" aria-labelledby="google">
+      <div><div class="eyebrow">Подключение Google</div><h2 id="google">Доступ к файлам приложения</h2></div>
+      <div><p>OMA Meetings запрашивает разрешение <code>drive.file</code>: создавать и читать файлы, с которыми работает приложение, и получать связанные с ними служебные данные и комментарии о результате обработки.</p><p>OAuth-подключение локального приложения и подключение Google Drive в ChatGPT Work настраиваются отдельно. Отправка уведомлений о готовности выполняется через настроенный SMTP-сервер; локальный загрузчик не использует Gmail API в текущем маршруте.</p><p class="note">Аудиозаписи не загружаются локальным обработчиком в Google Drive. Расшифровки могут содержать сведения об участниках и обсуждаемых вопросах.</p></div>
+    </section>
+    <section class="section split" aria-labelledby="use">
+      <h2 id="use">Использование и поддержка</h2>
+      <div><p>Приложение предназначено для ограниченного круга пользователей с собственной настроенной установкой. Этот сайт содержит описание и политику конфиденциальности; он не принимает записи встреч.</p><p>Вопросы о работе приложения, доступе Google и обработке данных: <a href="mailto:omaby.ai@gmail.com">omaby.ai@gmail.com</a>.</p></div>
+    </section>
+  </main>
+  <footer><span>OMA Meetings · 2026</span><a href="privacy.html">Политика конфиденциальности</a><a href="mailto:omaby.ai@gmail.com">omaby.ai@gmail.com</a></footer>
+</body>
+</html>
